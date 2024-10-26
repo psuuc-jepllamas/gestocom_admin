@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="/css/css-hp.css">
+
+    <!-- Font Awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="container">
+
+        <!-- =============== Navigation ================ -->
+        <div class="navigation">
+            <ul style="list-style: none; padding: 0;">
+                <li>
+                    <h1><span class="title fw-bold mt-3" style="font-size: 24px;">GestoCom</span></h1>
+                </li>
+                <li
+                    style="background-color: var(--white) !important; border-top-left-radius: 30px; border-bottom-left-radius: 30px;">
+                    <a style="color: var(--blue);" href="educational_materials.html" href="dashboard.html"><span
+                            class="title fw-bold">Dashboard</span></a>
+                </li>
+                <li>
+                    <a href="educational_materials.html"><span class="title fw-bold">Assessment</span></a>
+                </li>
+                <ul style="list-style: none; padding-left: 20px;">
+                    <li>
+                        <a href="user_process_report.html"><span class="title">Learning Materials</span></a>
+                    </li>
+                    <li>
+                        <a href="user_process_report.html"><span class="title">User Process Report</span></a>
+                    </li>
+                </ul>
+                <li>
+                    <a href="feedbacks.html"><span class="title fw-bold">Feedbacks</span></a>
+                </li>
+                <li>
+                    <a href="accountmanage.html"><span class="title fw-bold">Account Management</span></a>
+                </li>
+                <li>
+                    <a href="#"><span class="title fw-bold">Sign Out</span></a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ========================= Main ==================== -->
+
+        <div class="main">
+            <div class="topbar">
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+                <!-- ========================= Top Right Image and Profile ==================== -->
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div class="top-right-image">
+                        <img src="/images/design.png" alt="Design Image" width="200">
+                    </div>
+                    <div class="top-right-admin-profile text-end">
+                        <ion-icon class="me-1" name="person"></ion-icon>
+                        <span class="text-dark fw-bold">Admin</span>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ======================= Cards ================== -->
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">10</div>
+                        <div class="cardName">Total Users</div>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">7</div>
+                        <div class="cardName">Subscribed Users</div>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="card-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">10</div> <!-- Total number of users across categories -->
+                        <div class="cardName">User Categories</div> <!-- General title for the card -->
+                    </div>
+                    <div class="category-details">
+                        <p><span class="category-title">Beginner Users: </span><span class="category-number">4</span>
+                        </p>
+                        <p><span class="category-title">Intermediate Users: </span><span
+                                class="category-number">3</span></p>
+                        <p><span class="category-title">Advanced Users: </span><span class="category-number">3</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts -->
+            <div class="graphBox">
+                <div class="box">
+                    <h2 class="chart-heading mt-3">Number of Users per Category</h2>
+                    <div class="programming-stats">
+                        <div class="chart-container">
+                            <canvas class="my-chart"></canvas>
+                        </div>
+                        <div class="details">
+                            <ul></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="graph_chart">
+                        <canvas id="graph_chart_data"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========== Scripts =========  -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/my_chart.js"></script>
+    <script src="assets/js/graph_chart.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+</body>
+
+</html>

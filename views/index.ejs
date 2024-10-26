@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User List</title>
+</head>
+<body>
+  <h1>All Users</h1>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% users.forEach(function(user) { %>
+        <tr>
+          <td><%= user.id %></td>
+          <td><%= user.name %></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+  <br>
+
+  <h1>All Users</h1>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Module</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% module.forEach(function(module) { %>
+        <tr>
+          <td><%= module.module %></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</body>
+</html>
